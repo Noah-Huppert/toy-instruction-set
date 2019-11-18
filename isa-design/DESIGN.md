@@ -65,9 +65,9 @@ purpose: | Instruction |  Condition | Operands |
 
 - Instructions: Accommodates 64 instructions
 - Condition: See [Status Codes](#status-codes)
-- Operands: Used for operand data, for each operands passed in segment 2-bits 
-            precede it which indicate its addressing mode (see 
-			[Addressing Modes](#addressing-modes))
+- Operands: Used for operand data, for each operand passed in there is a 
+            segment of 2-bits preceding it which indicates its addressing mode 
+			(see [Addressing Modes](#addressing-modes))
 
 # Registers
 16 total:

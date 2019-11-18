@@ -67,19 +67,22 @@ purpose: | Instruction |  Condition | Operands |
 
 - Instructions: Accommodates 64 instructions
 - Condition: See [Status Codes](#status-codes)
-- Operands: Used for operands
+- Operands: Used for operand data, for each operands passed in segment 2-bits 
+            precede it which indicate its addressing mode (see 
+			[Addressing Modes](#addressing-modes))
 
 # Registers
-14 general purpose registers (`R0-R13`).  
+16 total:
 
-1 dedicated program counter register (`PC`).  
-
-1 dedicated status code register (`SC`).
+- `R0-13`: 14 general purpose registers
+- `PC`: 1 dedicated program counter register
+- `SC`: 1 dedicated status code register
+- `LI`: 1 dedicated link register which holds jump values
 
 Assembly syntax:
 
 ```
-R0-13|PC|SC
+R0-13|PC|SC|LI
 ```
 
 In the documentation you may also see the shorthand:
@@ -88,7 +91,12 @@ In the documentation you may also see the shorthand:
 {REG}
 ```
 
-which refers to the longer form assembly syntax above.
+Bit pattern:
+
+- unsigned 4-bit number
+- `R0-13`: 0-13
+- `PC`: 14
+- `SC`: 15
 
 # Addressing Modes
 Addressing modes determine how operands of instructions are interpreted.
@@ -104,6 +112,8 @@ Assembly syntax:
 
 - `{REG}`: Register value is stored within
 
+Bit pattern: `00`
+
 ## Immediate
 Constant value.  
 
@@ -115,6 +125,8 @@ Assembly syntax:
 
 - `VALUE`: Constant value, default base 10, prefix with `0x` for hex, and `b` 
            for binary
+		   
+Bit pattern: `01`
 
 ## Register Indirect
 Register holds a memory address. Refers to value stored in this memory address.
@@ -129,6 +141,8 @@ Assembly syntax:
 
 *Note: Brackets (`[`, `]`) are part of syntax, they are not indicate contents 
 are optional*
+
+Bit pattern: `10`
 
 ## Register Indirect Offset
 Register holds a base memory address. Immediate value is added to base address. 
@@ -146,17 +160,31 @@ Assembly syntax:
 *Note: Brackets (`[`, `]`) are part of syntax, they are not indicate contents 
 are optional*
 
+Bit pattern: `11`
+
 # Signedness and Types
 Some instructions have variations based on the type of the data.  
 
 Instruction mnemonics will be prefixed in assembly based on the type.
 
+In the documentation you may also see the shorthand:
+
+```
+{ST}
+```
+
+which represents any of the prefixes listed below.
+
 ## Integer
+Prefixes:
+
 - `U`: 16-bit unsigned integer
 - `S`: 2's complement 16-bit integer
 
 ## Float
-`F`: 2's complement 16-bit mantissa. 2's complement 16-bit exponent.
+Prefixes:
+
+- `F`: 2's complement 16-bit mantissa. 2's complement 16-bit exponent.
 
 # Status Codes
 Indicate the status of a previous operation.

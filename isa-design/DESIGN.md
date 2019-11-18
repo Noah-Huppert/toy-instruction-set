@@ -40,16 +40,14 @@ Blank lines, or lines with labels perform no operations.
 Each line follows the format:
 
 ```
-[LABEL] [SIGNEDNESS][TYPE]<INSTRUCTION>[CONDITION] OPS...
+[LABEL] [ST]<INSTRUCTION>[CONDITION] OPS...
 ```
 
 - `LABEL`: Optional, creates a "bookmark" at the next instruction for later use,
            put a space or tab in this place to not create a label, can be 
 		   included on their own line
-- `SIGNEDNESS`: Optional by instruction, indicates signedness of operators, `S` 
-                for signed, `U` for unsigned
-- `TYPE`: Optional by instruction, indicates type of operators, `I` for integer,
-          `F` for float
+- `ST`: Optional by instruction, indicates signedness and type of operators, see
+        [Signedness and Type](#signedness-and-type)
 - `INSTRUCTION`: 3 letter mnemonic which refers to the instruction which will 
 		         be run
 - `CONDITION`: Optional, status code which must be set in `SC` register for 

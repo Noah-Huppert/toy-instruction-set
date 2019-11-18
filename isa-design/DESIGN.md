@@ -29,8 +29,8 @@ Most significant bit
 v
 X X X X
       ^
-	  |
-	  Least significant bit
+      |
+      Least significant bit
 ```
 
 # Assembly Syntax

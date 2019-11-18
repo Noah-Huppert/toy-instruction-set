@@ -176,13 +176,13 @@ which represents any of the prefixes listed below.
 ## Integer
 Prefixes:
 
-- `U`: 16-bit unsigned integer
-- `S`: 2's complement 16-bit integer
+- `U`: Insigned integer
+- `S`: 2's complement integer
 
 ## Float
 Prefixes:
 
-- `F`: 2's complement 16-bit mantissa. 2's complement 16-bit exponent.
+- `F`: 2's complement mantissa. 2's complement exponent
 
 # Status Codes
 Indicate the status of a previous operation.

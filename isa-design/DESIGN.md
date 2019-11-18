@@ -242,3 +242,28 @@ Instructions:
 
 - `LSH`: Store `src` left shifted by `n` bits
 - `RSH`: Store `src` rotate shifted by `n` bits
+
+## Compare
+Assembly syntax:
+
+```
+CMP <op1> <op2>
+```
+
+Instructions:
+
+- `CMP`: Compares `op1` to `op2` and sets the status code register based on 
+         the result
+
+## Jump
+Assembly syntax:
+
+```
+JMP <dest>
+```
+
+No sign and type variations.
+
+Instructions:
+
+- `JMP`: Jump to instruction at address `dest`

@@ -58,9 +58,9 @@ Each line follows the format:
 32-bits per instruction encoding.
 
 ```
-        LSB                                   MSB
-bits:    | ---- 6 ---- |  --- 2 --- | -- 24 -- |
-purpose: | Instruction |  Condition | Operands |
+        MSB                                   LSB
+bits:    | -- 24 -- | --- 2 --- | ---- 6 ---- |
+purpose: | Operands | Condition | Instruction |
 ```
 
 - Instructions: Accommodates 64 instructions

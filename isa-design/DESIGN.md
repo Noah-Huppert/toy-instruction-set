@@ -231,7 +231,7 @@ Instructions:
 Assembly syntax:
 
 ```
-LSH,RSH <dest> <src> <n>
+{ST}LSH,RSH <dest> <src> <n>
 ```
 
 Sign and type variations.

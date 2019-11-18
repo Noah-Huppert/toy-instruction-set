@@ -137,7 +137,7 @@ Assembly syntax:
 
 - `{REG}`: Register which holds memory address
 
-*Note: Brackets (`[`, `]`) are part of syntax, they are not indicate contents 
+*Note: Brackets (`[`, `]`) are part of syntax, they do not indicate contents 
 are optional*
 
 Bit pattern: `10`
@@ -155,7 +155,7 @@ Assembly syntax:
 - `{REG}`: Register which holds base memory address
 - `OFFSET`: Offset to apply to base memory address
 
-*Note: Brackets (`[`, `]`) are part of syntax, they are not indicate contents 
+*Note: Brackets (`[`, `]`) are part of syntax, they do not indicate contents 
 are optional*
 
 Bit pattern: `11`

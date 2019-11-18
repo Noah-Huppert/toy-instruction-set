@@ -215,7 +215,7 @@ Instructions:
 Assembly syntax:
 
 ```
-ADD|SUB|MLT|DIV <dest> <op1> <op2>
+{ST}ADD|SUB|MLT|DIV <dest> <op1> <op2>
 ```
 
 Sign and type variations.
@@ -245,8 +245,10 @@ Instructions:
 Assembly syntax:
 
 ```
-CMP <op1> <op2>
+{ST}CMP <op1> <op2>
 ```
+
+Sign and type variations.
 
 Instructions:
 

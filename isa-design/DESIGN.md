@@ -37,6 +37,10 @@ X X X X
 Each line is interpreted as a new instruction.  
 Blank lines, or lines with labels perform no operations.  
 
+Characters after `//` on a line are comments.
+
+Tokens are separated by the space character.
+
 Each line follows the format:
 
 ```
